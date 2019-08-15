@@ -10,6 +10,8 @@ export class AlunoComponent implements OnInit {
   alunosDesenv:string[ ];
   alunosRedes: string [];
   @Input() curso: string = '';
+  
+
 
 
   constructor() { }

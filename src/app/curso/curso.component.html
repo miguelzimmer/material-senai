@@ -1,2 +1,6 @@
-<input placeholder=" Digite o nume do curso" class="form-control">
+<input placeholder=" Digite o nume do curso" class="form-control" 
+(keyup.enter)="CursoAlternado(cursoInput.value)"#cursoInput>
+
+
 <app-aluno [curso]="cursoAtual" ></app-aluno>
+

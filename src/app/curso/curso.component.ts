@@ -14,5 +14,13 @@ export class CursoComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  CursoAlternado(valor:string){
+    if (valor == 'Desenvolvimento'){
+      return this.cursoAtual = valor;
+    }
+    if (valor == 'redes') {
+      return this.cursoAtual = valor;
+    }
+    return this.cursoAtual = " ";
+   }
 }
