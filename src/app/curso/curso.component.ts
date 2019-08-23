@@ -9,11 +9,20 @@ import { NgForm } from '@angular/forms';
 export class CursoComponent implements OnInit {
 
     cursoAtual: string = " ";
-    curso: any = {
+    curso: any = [{
       nome:null,
       descricao:null,
       email:null
+      },{
+        nome:null,
+        descricao:null,
+        email:null
+      },{
+        nome:null,
+        descricao:null,
+        email:null
       }
+    ]
 
   constructor() { }
 

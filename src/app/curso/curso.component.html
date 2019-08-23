@@ -30,5 +30,14 @@
         </div>
     </div>
     <button type="submit" [disabled]="!f.valid" class="btn btn-primary">Submeter</button>
+
+    <ul>
+        <li *ngFor="let cursoExibe of curso">
+            {{cursoExibe.nome}}
+            {{cursoExibe.email}}
+            {{cursoExibe.descricao}}
+        </li>
+        
+    </ul>
  
 </form>
