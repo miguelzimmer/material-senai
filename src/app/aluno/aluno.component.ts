@@ -8,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class AlunoComponent implements OnInit {
 
   alunosDesenv:string[ ];
-  alunosRedes: string [];
+  alunosRedes: string [ ];
   @Input() curso: string = '';
   
 

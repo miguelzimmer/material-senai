@@ -1,6 +1,34 @@
-<input placeholder=" Digite o nume do curso" class="form-control" 
-(keyup.enter)="CursoAlternado(cursoInput.value)"#cursoInput>
+<br>
+<form #f="ngForm" (ngSubmit)="onSubmit(f)" class="form-horizontal">
 
+    <div class="form-group">
+        <div class="col-sm-12">
+            <label for="nome" class="control-label">Nome:</label>
+        </div>
+        <div class="col-sm-12">
+            <input type="text" name="nome" id="nome" class="form-control" 
+            placeholder="Nome" required #nome="ngModel" [(ngModel)]="curso.nome">
+        </div>
+    </div>
 
-<app-aluno [curso]="cursoAtual" ></app-aluno>
+    <div class="form-group">
+        <div class="col-sm-12">
+            <label for="descricao" class="control-label">Descrição</label>
+        </div>
+        <div class="col-sm-12">
+            <input type="text" name="descricao" id="descricao" 
+            placeholder="Descrição" class="form-control"#descricao="ngModel"[(ngModel)]="curso.descricao">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-12">
+            <label for="email" class="control-label">E-mail contato</label>
+        </div>
+        <div class="col-sm-12">
+            <input type="email" email name="email" id="email" 
+            placeholder="E-mail contato" class="form-control" required #email="ngModel"[(ngModel)]="curso.email" >
+        </div>
+    </div>
+    <button type="submit" [disabled]="!f.valid" class="btn btn-primary">Submeter</button>
 
+</form>
