@@ -1,5 +1,33 @@
-<h1>Lista de alunos {{curso}} </h1>
+<form   class="form-horizontal">
+    <h1>Alunos</h1>
+    <div class="form-group">
+        <div class="col-sm-12">
+            <label for="nome" class="control-label">Nome:</label>
+        </div>
+        <div class="col-sm-12">
+            <input type="text" name="nome" id="nome" class="form-control" 
+            placeholder="Nome do Aluno/a" required>
+        </div>
+    </div>
 
-<ul>
-  <li *ngFor="let alunoAtual of getAlunos()">{{alunoAtual}}</li>
-</ul>
+    <div class="form-group">
+        <div class="col-sm-12">
+            <label for="descricao" class="control-label">Descrição</label>
+        </div>
+        <div class="col-sm-12">
+            <input type="text" name="descricao" id="descricao" 
+            placeholder="Descrição do curso" class="form-control">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-12">
+            <label for="email" class="control-label">E-mail contato</label>
+        </div>
+        <div class="col-sm-12">
+            <input type="email" email name="email" id="email" 
+            placeholder="E-mail contato" class="form-control" required>
+        </div>
+    </div>
+    <button type="submit"  class="btn btn-primary">Submeter</button>
+ 
+</form>

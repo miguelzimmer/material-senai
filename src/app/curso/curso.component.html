@@ -1,13 +1,13 @@
 <br>
 <form #f="ngForm" (ngSubmit)="onSubmit(f)" class="form-horizontal">
-
+    <h1>Cursos</h1>
     <div class="form-group">
         <div class="col-sm-12">
             <label for="nome" class="control-label">Nome:</label>
         </div>
         <div class="col-sm-12">
             <input type="text" name="nome" id="nome" class="form-control" 
-            placeholder="Nome" required #nome="ngModel" [(ngModel)]="curso.nome">
+            placeholder="Nome do curso" required #nome="ngModel" [(ngModel)]="curso.nome">
         </div>
     </div>
 
@@ -17,7 +17,7 @@
         </div>
         <div class="col-sm-12">
             <input type="text" name="descricao" id="descricao" 
-            placeholder="Descrição" class="form-control"#descricao="ngModel"[(ngModel)]="curso.descricao">
+            placeholder="Descrição do curso" class="form-control"#descricao="ngModel"[(ngModel)]="curso.descricao">
         </div>
     </div>
     <div class="form-group">
@@ -26,9 +26,9 @@
         </div>
         <div class="col-sm-12">
             <input type="email" email name="email" id="email" 
-            placeholder="E-mail contato" class="form-control" required #email="ngModel"[(ngModel)]="curso.email" >
+            placeholder="E-mail contato" class="form-control" required #email="ngModel"[(ngModel)]="curso.email">
         </div>
     </div>
     <button type="submit" [disabled]="!f.valid" class="btn btn-primary">Submeter</button>
-
+ 
 </form>

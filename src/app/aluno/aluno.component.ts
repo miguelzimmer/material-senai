@@ -9,8 +9,12 @@ export class AlunoComponent implements OnInit {
 
   alunosDesenv:string[ ];
   alunosRedes: string [ ];
-  @Input() curso: string = '';
-  
+  alunos: any = {
+    nome:null,
+    descricao:null,
+    email:null
+
+  }
 
 
 
@@ -22,14 +26,4 @@ export class AlunoComponent implements OnInit {
     this.alunosRedes = ['miguel','gabriel','samara']
 
   }
-  getAlunos(){
-    if(this.curso == 'Desenvolvimento'){
-      return this.alunosDesenv
-    }
-    if (this.curso == 'redes') {
-      return this.alunosRedes;
-    }
-    return[];
-  }
- 
 }
