@@ -38,13 +38,6 @@ export class CursoComponent implements OnInit {
     return this.cursoAtual = " ";
    }
    onSubmit(formulario: NgForm){
-      if(formulario.valid){
-        console.log(formulario);
-        console.log("--valores do formulario--")
-        console.log(formulario.form.value);
-        console.log('--valor do objeto--')
-        console.log(this.curso);
-     }
-      }
-     
+      this.curso.push(this.curso.nome,this.curso.descricao,this.curso.email)
+   }   
 }
