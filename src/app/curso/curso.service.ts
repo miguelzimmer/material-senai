@@ -9,8 +9,8 @@ export class CursoService {
   private cursos: any [] = [];
   constructor() {}
 
-getCurso(){
-  return this.cursos;
+getCurso(id: string): any{
+  return this.cursos.find(curso => curso.id == id);
 }
 saveCurso(formulario:NgForm){
   this.cursos.push(formulario.value)

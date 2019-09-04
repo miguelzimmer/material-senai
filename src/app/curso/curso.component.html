@@ -31,7 +31,8 @@
     <button type="submit" [disabled]="!Form.valid" class="btn btn-primary">Submeter</button>
 
     <ul>
-        <li *ngFor="let cursoExibe of curso">
+        <li *ngFor="let cursoExibe of curso"
+        routerLink="cursodetail/{{curso.id}}">
             <label>Nome:</label>{{cursoExibe.nome}}<br>
             <label>Email:</label>{{cursoExibe.email}}<br>
            <label>Descrição:</label>{{cursoExibe.descricao}}
